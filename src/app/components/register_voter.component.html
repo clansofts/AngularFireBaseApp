@@ -1,0 +1,140 @@
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <strong>Registration Form</strong> 
+      </div>
+      <div class="card-body">
+        <form  #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+        
+          <div class="form-group row">
+            <label class="col-md-2 form-control-label" for="text-input">Full Name</label>
+            <div class="col-md-9">
+              <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Full name"
+              #name="ngModel" [(ngModel)]="voterService.selectedVoter.fullname">
+              
+            </div>
+          </div>
+
+          <div class="form-group row">
+              <label class="col-md-2 form-control-label" for="text-input">Phone Number :</label>
+              <div class="col-md-9">
+                <input type="text" id="text-input" name="phoneno" class="form-control" placeholder="Phone No"
+                #name="ngModel" [(ngModel)]="voterService.selectedVoter.phoneno">
+                
+              </div>
+            </div>
+
+          <div class="form-group row">
+            <label class="col-md-2 form-control-label" for="email-input">Email Address</label>
+            <div class="col-md-9">
+              <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" 
+              #name="ngModel" [(ngModel)]="voterService.selectedVoter.email">
+              <span class="help-block">Please enter your email</span>
+            </div>
+          </div>
+
+          <div class="form-group row">
+              <label class="col-md-2 form-control-label" for="text-input">Date of Birth :</label>
+              <div class="col-md-9">
+              <input type="date" id="dob" name="dob" class="form-control" placeholder="Date of Birth" 
+              #name="ngModel" [(ngModel)]="voterService.selectedVoter.dob">
+                
+              </div>
+            </div>
+
+            <div class=" form-group row">
+                <label class="col-md-2 form-control-label" for="text-input">Postal Address :</label>
+                <div class="col-md-4">
+                <input type="text" id="dob" name="postal" class="form-control" placeholder="Postal Address"
+                #name="ngModel" [(ngModel)]="voterService.selectedVoter.postal">
+                  
+                </div>
+                <label class="col-md-2 form-control-label" for="text-input">Code :</label>
+                <div class="col-md-3">
+                <input type="text" id="info" name="info" class="form-control" placeholder="Code" 
+                #name="ngModel" [(ngModel)]="voterService.selectedVoter.postal">
+                  
+                </div>
+              </div><!--/.row-->
+
+              <div class=" form-group row">
+                  <label class="col-md-2 form-control-label" for="text-input">Ward :</label>
+                  <div class="col-md-4">
+                      <select id="select" value="ward" name="ward" class="form-control" 
+                      #name="ngModel" [(ngModel)]="voterService.selectedVoter.ward">
+                          <option value="0">Please select</option>
+                          <option value="KAIMA">KAIMA</option>
+                          <option value="KABETE">KABETE</option>
+                          <option value="WESTLANDS">WESTLANDS</option>
+                        </select>  
+                  </div>
+                  <label class="col-md-2 form-control-label" for="text-input">Polling Station :</label>
+                  <div class="col-md-3">
+                      <select id="select" value="polling" name="polling" class="form-control" 
+                      #name="ngModel" [(ngModel)]="voterService.selectedVoter.polling">
+                          <option value="0">Please select</option>
+                          <option value="cbd">CBD</option>
+                          <option value="waregi">WAREGI</option>
+                          <option value="wasaria">WASARIA</option>
+                        </select>  
+                  </div>
+                </div><!--/.row-->
+
+                <div class=" form-group row">
+                    <label class="col-md-2 form-control-label" for="text-input">County :</label>
+                    <div class="col-md-4">
+                        <select id="select"  value="county" name="county" class="form-control" 
+                        #name="ngModel" [(ngModel)]="voterService.selectedVoter.county">
+                            <option value="0">Please select</option>
+                            <option value="Nairobi">NAIROBI</option>
+                            <option value="KIAMBU">KIAMBU</option>
+                            <option value="NAKURU">NAKURU</option>
+                          </select>  
+                    </div>
+                    <label class="col-md-2 form-control-label" for="text-input">Contituency :</label>
+                    <div class="col-md-3">
+                        <select id="select" value="constituency" name="constituency" class="form-control" 
+                        #name="ngModel" [(ngModel)]="voterService.selectedVoter.constituency">
+                            <option value="0">Please select</option>
+                            <option value="west">WESTLANDS </option>
+                            <option value="Dago">DAGORETI </option>
+                            <option value="kahawa">KAHAWA</option>
+                          </select>  
+                    </div>
+                  </div><!--/.row-->
+
+                  <div class=" form-group row">
+                      <label class="col-md-2 form-control-label" for="text-input">Passport Photo :</label>
+                      <div class="col-md-4">
+                      <input type="file" (change)="detectFiles($event)" >
+                        
+                      </div>
+                      <label class="col-md-2 form-control-label" for="text-input">National Id :</label>
+                      <div class="col-md-3">
+                          <input type="text" >
+                        
+                      </div>
+                    </div><!--/.row-->
+
+                    
+
+                     <div class="form-group row">
+                          <label class="col-md-2 form-control-label" for="text-input"></label>
+                          <div class="card-footer col-md-9">
+                              <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                              <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                           
+                            
+                          </div>
+                        </div>
+        </form>
+      </div>
+      
+    </div>
+   
+  </div>
+    
+  
+</div><!--/.row-->

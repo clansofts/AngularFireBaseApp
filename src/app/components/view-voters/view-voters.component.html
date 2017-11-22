@@ -1,0 +1,52 @@
+<!--/.row-->
+<div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Combined All Table
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered table-striped table-sm">
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>Addres</th>
+                <th>Date registered</th>
+                <th>Email</th>
+                <th>Postal</th>
+                <th>ward</th>
+                <th>polling Station</th>
+                <th>Contituency</th>
+                <th>County</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr  *ngFor = "let item of voterList" >
+                <td>{{item.constituency}}</td>
+                <td>{{item.dob}}</td>
+                <td>{{item.county}}</td>
+                <td>{{item.dob}}</td>
+                <td>{{item.county}}</td>
+                <td>{{item.dob}}</td>
+                <td>{{item.county}}</td>
+                <td>{{item.dob}}</td>
+                <td>{{item.county}}</td>
+                <td style="align-content: right">
+                      <button type="button" class="btn btn-success">Update</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-primary">View</button>
+                        
+                </td>
+              </tr>
+             
+            </tbody>
+          </table>
+          <nav>
+            
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!--/.col-->
+  </div>
